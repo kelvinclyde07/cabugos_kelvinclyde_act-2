@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Practical Activity - Images, Hyperlinks, Multimedia, Tags, DOM</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 30px 60px;
+    background-color: #faf8f5;
+    color: #2b2b2b;
+  }
+  header {
+    border-bottom: 3px solid #8a5a44;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+  }
+  header h1 { margin-bottom: 4px; }
+  nav {
+    background: #efe6dd;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  nav a { margin-right: 16px; text-decoration: none; color: #8a5a44; font-weight: bold; }
+  nav a:hover { text-decoration: underline; }
+  section {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+  }
+  h2 {
+    color: #8a5a44;
+    border-left: 5px solid #8a5a44;
+    padding-left: 10px;
+  }
+  figure {
+    display: inline-block;
+    margin: 10px 20px 10px 0;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+  figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 6px;
+  }
+  img { border-radius: 4px; display: block; }
+  .img-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .link-list li { margin-bottom: 8px; }
+  audio, video { display: block; margin: 12px 0; max-width: 100%; }
+  blockquote {
+    background: #f1ece5;
+    border-left: 4px solid #8a5a44;
+    margin: 15px 0;
+    padding: 10px 18px;
+    font-style: italic;
+  }
+  code {
+    background: #eee;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+  }
+  pre {
+    background: #2b2b2b;
+    color: #f5f5f5;
+    padding: 14px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+  mark { background-color: #ffe08a; }
+  iframe { border: none; border-radius: 6px; margin-top: 10px; }
+  footer {
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1 id="main-heading">My HTML Activity 2</h1>
+  <p>Demonstrating Images, Hyperlinks, Multimedia, Useful Tags, and the HTML DOM</p>
+</header>
+
+<nav id="main-nav">
+  <a href="#images-section">Images</a>
+  <a href="#hyperlinks-section">Hyperlinks</a>
+  <a href="#multimedia-section">Multimedia</a>
+  <a href="#tags-section">Useful Tags</a>
+  <a href="#dom-section">HTML DOM</a>
+</nav>
+
+
+<section id="images-section">
+  <h2>1. Images</h2>
+
+  <div class="img-row">
+    <img src="images/antartica.webp" alt="Antartica" width="250" height="180">
+
+    <img src="images/showing_html.png" alt="A close-up of a laptop showing HTML code" width="250" height="180">
+    
+    <figure id="featured-figure">
+      <img src="images/coffee.jpg" alt="Coffee" width="250" height="180">
+      <figcaption>Coffee</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+<section id="hyperlinks-section">
+  <h2>2. Hyperlinks</h2>
+  <ul class="link-list">
+
+    <li><strong>Internal link:</strong>
+      <a href="#dom-section">Jump to the HTML DOM section </a>
+    </li>
+
+    <li><strong>External link:</strong>
+      <a href="https://open.spotify.com/" target="_blank">
+        Visit Spotify
+      </a>
+    </li>
+
+
+    <li><strong>Email link:</strong>
+      <a href="mailto:yourname@example.com?subject=HTML%20Activity%20Feedback">
+        kevinclyde.cabugos@carsu.edu.ph
+      </a>
+    </li>
+
+
+    <li><strong>Anchor link:</strong>
+      <a href="#tags-section">Jump down to the Useful Tags section</a>
+    </li>
+  </ul>
+</section>
+
+<section id="multimedia-section">
+  <h2>3. Multimedia</h2>
+
+  <h3>Audio</h3>
+  <audio controls id="my-audio">
+    <source src="media/audio.mp3" type="audio/mpeg">
+    <a href="https://soundbuttonsworld.com/sound-button/are-you-serious-right-now-bro-1671196733053">download the audio file</a> instead.
+  </audio>
+
+  <h3>Video</h3>
+  <video controls width="400" id="my-video">
+    <source src="media/video.mp4" type="video/mp4">
+    Your browser does not support the video element. You can
+    <a href="https://www.tiktok.com/@emp.prjt/video/7621309973577927967?is_from_webapp=1&sender_device=pc">download the video file</a> instead.
+  </video>
+</section>
+
+
+<section id="tags-section">
+  <h2>4. Useful Tags</h2>
+
+ 
+  <blockquote>
+    "The Web does not just connect machines, it connects people." &mdash; Tim Berners-Lee
+  </blockquote>
+
+ 
+  <p>
+    <abbr title="HyperText Markup Language">HTML</abbr> is the standard language used to create web pages.
+  </p>
+
+
+  <p>
+    The most important thing to remember about the DOM is that it represents your page as a <mark>tree structure</mark>.
+  </p>
+
+
+  <pre><code style="color:black">&lt;p&gt;Hello, World!&lt;/p&gt;</code></pre>
+
+
+  <p>&copy; 2026 My HTML Activity.</p>
+</section>
+
+<section id="dom-section">
+  <h2>5. HTML DOM</h2>
+  <p>
+    The HTML DOM (Document Object Model) represents this webpage as a tree of elements, where
+    every tag is a "node" that can have parent and child relationships with other tags.
+    Below is a screenshot of this page's DOM tree taken from my browser's DevTools
+    (right-click &rarr; Inspect &rarr; Elements panel).
+  </p>
+
+  <figure>
+    <img src="images/html_doom.png" alt="Screenshot of the DOM tree shown in browser DevTools Elements panel" width="500">
+    <figcaption>DOM tree screenshot showing nested elements, taken from Chrome DevTools.</figcaption>
+  </figure>
+
+  <p>
+    Elements with an <code>id</code> attribute in this page include
+    <code>#main-heading</code>, <code>#featured-figure</code>, <code>#my-audio</code>,
+    <code>#my-video</code>, and <code>#dom-section</code> itself &mdash; so they can each be
+    located individually in the Elements panel.
+  </p>
+</section>
+
+<footer>
+  <p>Created for the IT 110 HTML Activity 2 &mdash; Images, Hyperlinks, Multimedia, Useful Tags, and the HTML DOM.</p>
+</footer>
+
+
+</body>
+</html>
